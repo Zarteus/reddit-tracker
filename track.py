@@ -3,12 +3,12 @@ import re
 import urllib.request
 import os
 
-POST_URL = "https://www.reddit.com/r/TELUSinternational/comments/1uitcbl/nta_no_tasks_available_weekly_thread_create_all/.json"
+POST_URL = "https://old.reddit.com/r/TELUSinternational/comments/1uitcbl/nta_no_tasks_available_weekly_thread_create_all/.json"
 KEYWORD_PATTERN = re.compile(r"\buk\b", re.IGNORECASE)
 WEBHOOK_URL = os.environ["DISCORD_WEBHOOK"]
 SEEN_FILE = "seen.json"
 
-HEADERS = {"User-Agent": "reddit-comment-tracker/1.0"}
+HEADERS = {"User-Agent": "python:reddit-comment-tracker:v1.0 (by /u/Zarteus_1)"}
 
 def load_seen():
     try:
